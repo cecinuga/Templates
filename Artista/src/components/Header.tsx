@@ -36,11 +36,11 @@ const useStyles = createStyles((theme) => ({
 
   mainLink: {
     textTransform: 'uppercase',
-    fontFamily: "'Russo One' sans-serif",
+    fontFamily: "Russo One, sans-serif",
     fontSize: rem(13),
     color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
     padding: `${rem(7)} ${theme.spacing.sm}`,
-    fontWeight: 700,
+    fontWeight: 200,
     borderBottom: `${rem(2)} solid transparent`,
     transition: 'border-color 100ms ease, color 100ms ease',
 
