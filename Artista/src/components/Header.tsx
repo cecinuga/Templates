@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Text, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-const HEADER_HEIGHT = rem(84);
+const HEADER_HEIGHT = rem(70);
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -36,6 +36,7 @@ const useStyles = createStyles((theme) => ({
 
   mainLink: {
     textTransform: 'uppercase',
+    fontFamily: "'Russo One' sans-serif",
     fontSize: rem(13),
     color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
     padding: `${rem(7)} ${theme.spacing.sm}`,
@@ -51,7 +52,7 @@ const useStyles = createStyles((theme) => ({
 
   mainLinkActive: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    borderBottomColor: theme.colors.red[theme.colorScheme === 'dark' ? 5 : 6],
+    borderBottomColor: theme.colors.gray[theme.colorScheme === 'dark' ? 5 : 6],
   },
 }));
 
@@ -89,11 +90,12 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
         <MantineHeader height={HEADER_HEIGHT} mb={120}>
             <Container className={classes.inner}>
                 <Title 
+                    className='font-primary'
                     fw={500} 
                     order={2}
                     variant="gradient"
-                    gradient={{ from: 'red.9', to: 'orange.3', deg: 45 }}
-                >   Big Mama
+                    gradient={{ from: 'gray.9', to: 'gray.3', deg: 45 }}   
+                >   Vincenzo Nobile
                 </Title>
                 <div className={classes.links}>
                     <Group spacing={0} position="right" className={classes.mainLinks}>
