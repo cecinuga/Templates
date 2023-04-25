@@ -87,7 +87,7 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
 
     return(
        <>
-        <MantineHeader height={HEADER_HEIGHT} mb={120}>
+        <MantineHeader height={HEADER_HEIGHT} mb={20}>
             <Container className={classes.inner}>
                 <Title 
                     className='font-primary'
