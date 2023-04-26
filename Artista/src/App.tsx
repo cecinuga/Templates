@@ -12,6 +12,7 @@ import planimetria from "./public/planimetria.jpg"
 import restauro from "./public/restauro.jpg"
 import viacavour from "./public/viacavour.jpg"
 import quality from "./public/quality.jpg"
+import BackgroundGradient from './components/BackgroundGradient'
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 const Opere: LinkProps = {label: 'Opere', link:"/opere"}
@@ -24,39 +25,40 @@ function App() {
   return (
     <>
       <Header mainLinks={[Home, Opere, ChiSono, Gallerie]} />
-      <Group position={"center"} spacing="xl"  >
-      <SimpleGrid
-        cols={4}
-        spacing={50}
-        breakpoints={[
-          { maxWidth: '62rem', cols: 3, spacing: 'md' },
-          { maxWidth: '48rem', cols: 2, spacing: 'sm' },
-          { maxWidth: '36rem', cols: 1, spacing: 'sm' },
-        ]}
-      >
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva}/></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={brune} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={iran} /></GridBox>
+      <BackgroundGradient bgColor={"#1a1b27"}/>
+      <Group position={"center"} spacing="xl" style={{overflow: "hidden", paddingTop: "2rem"}} >
+        <SimpleGrid
+          cols={4}
+          spacing={50}
+          breakpoints={[
+            { maxWidth: '62rem', cols: 3, spacing: 'md' },
+            { maxWidth: '48rem', cols: 2, spacing: 'sm' },
+            { maxWidth: '36rem', cols: 1, spacing: 'sm' },
+          ]}
+        >
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva}/></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={brune} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={iran} /></GridBox>
 
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={marcaspio} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={nag} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={planimetria} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={quality} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={marcaspio} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={nag} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={planimetria} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={quality} /></GridBox>
 
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={restauro} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={viacavour} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={restauro} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={viacavour} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
 
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-        <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+          <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
 
-      </SimpleGrid>
-
+        </SimpleGrid>
       </Group>
+
     </>
   )
 }

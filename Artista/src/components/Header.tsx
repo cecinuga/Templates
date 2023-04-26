@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Text, Title } from '@mantine/core';
+import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 const HEADER_HEIGHT = rem(70);
@@ -10,6 +10,9 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: "transparent",
+    position: "relative",
+    zIndex: 1,
   },
 
   burger: {
@@ -38,7 +41,7 @@ const useStyles = createStyles((theme) => ({
     textTransform: 'uppercase',
     fontFamily: "Russo One, sans-serif",
     fontSize: rem(13),
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[6] : theme.colors.gray[1],
     padding: `${rem(7)} ${theme.spacing.sm}`,
     fontWeight: 200,
     borderBottom: `${rem(2)} solid transparent`,
@@ -52,7 +55,7 @@ const useStyles = createStyles((theme) => ({
 
   mainLinkActive: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    borderBottomColor: theme.colors.gray[theme.colorScheme === 'dark' ? 5 : 6],
+    borderBottomColor: theme.colors.gray[theme.colorScheme === 'dark' ? 5 : 1],
   },
 }));
 
@@ -87,22 +90,29 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
 
     return(
        <>
-        <MantineHeader height={HEADER_HEIGHT} mb={20}>
+        <MantineHeader height={HEADER_HEIGHT}>
             <Container className={classes.inner}>
-                <Title 
-                    className='font-primary'
-                    fw={500} 
-                    order={2}
-                    variant="gradient"
-                    gradient={{ from: 'gray.9', to: 'gray.3', deg: 45 }}   
-                >   Vincenzo Nobile
-                </Title>
-                <div className={classes.links}>
-                    <Group spacing={0} position="right" className={classes.mainLinks}>
-                        {mainItems}
-                    </Group>
-                </div>
-                <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+                  <Title 
+                      pt={"30px"}
+                      className='font-primary'
+                      fw={500} 
+                      order={2}
+                      variant="gradient"
+                      gradient={{ from: 'white', to: 'gray.7', deg: 45 }}   
+                  >   Vincenzo Nobile
+                    <Title 
+                      order={2} 
+                      variant="gradient"
+                      align='right'
+                      className='font-secondary'
+                      gradient={{ from: 'white', to: 'white', deg: 45 }}>Architetto</Title>
+                  </Title>
+                  <div className={classes.links}>
+                      <Group spacing={0} position="right" className={classes.mainLinks}>
+                          {mainItems}
+                      </Group>
+                  </div>
+                  <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
             </Container>
         </MantineHeader>
        </> 

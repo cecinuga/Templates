@@ -1,5 +1,7 @@
 import { ReactElement, useState } from "react"
 import { useSpring, animated } from '@react-spring/web'
+import { getRandomInt } from "../lib/lib";
+import { useMediaQuery } from "@mantine/hooks";
 
 type GridBoxProps = {
     color: string;
@@ -9,6 +11,7 @@ type GridBoxProps = {
 
 export default function GridBox(props: GridBoxProps){
     const [hover, setHover] = useState<boolean>(false)
+    const lg = useMediaQuery("(min-width: 500px)")
     const gridBoxAni = useSpring({
         from: {
             top: "-600%"
@@ -17,27 +20,30 @@ export default function GridBox(props: GridBoxProps){
             top: "0%",
         },
         config: {
-            mass: 2*Math.random(),
-            friction: 20*Math.random(),
-            tension: 40*Math.random(),
+            mass: 3*getRandomInt(1, 2),
+            friction: 30*getRandomInt(1, 2),
+            tension: 45*getRandomInt(1, 2),
         }
     })
 
     return(
-        <animated.div style={{...gridBoxAni, position: "relative"}}>
+        <animated.div 
+            style={{...lg?gridBoxAni:{}, position: "relative", cursor: "pointer"}} 
+            onMouseEnter={()=>setHover(true)}
+            onMouseLeave={()=>setHover(false)}
+        >
             <div 
-                onMouseEnter={()=>setHover(true)}
-                onMouseLeave={()=>setHover(false)}
                 style={{
                     backgroundColor: hover?`${props.hoveredColor}50`:`${props.color}50`, 
                     width: "10rem",
                     height: "10rem",
-                    zIndex: "2",
-                    position: "relative"
+                    zIndex: hover?"1":"3",
+                    position: "relative",
+                    borderRadius: "5%"
                 }}>
             </div>
             <div style={{
-                zIndex: "1",
+                zIndex: "2",
                 position: "absolute",
                 bottom: "50%",
                 left: "6%",

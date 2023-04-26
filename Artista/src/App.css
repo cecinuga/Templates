@@ -1,1 +1,23 @@
 .font-primary{ font-family: 'Russo One', sans-serif; }
+.font-secondary{ font-family: 'Birthstone', cursive; }
+
+.w-100vh{width: 99vw;}
+.h-100vh{height: 100vh;}
+
+.mouse-cursor-gradient-tracking {content: ''}
+.mouse-cursor-gradient-tracking::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, rgb(233, 228, 229), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking::before {
+    --size: 1800px;
+}
