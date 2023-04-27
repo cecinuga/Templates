@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useNavigate } from 'react-router';
 
 const HEADER_HEIGHT = rem(70);
 
@@ -69,18 +70,17 @@ interface DoubleHeaderProps {
 }
 
 export default function Header({ mainLinks }: DoubleHeaderProps){
-
     const [opened, { toggle }] = useDisclosure(false);
     const { classes, cx } = useStyles();
     const [active, setActive] = useState(0);
+    const navigate = useNavigate()
 
     const mainItems = mainLinks.map((item, index) => (
-        <Anchor<'a'>
-        href={item.link}
+        <Anchor<'div'>
         key={item.label}
         className={cx(classes.mainLink, { [classes.mainLinkActive]: index === active })}
-        onClick={(event) => {
-            event.preventDefault();
+        onClick={() => {
+            navigate(item.link)
             setActive(index);
         }}
         >
@@ -93,7 +93,7 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
         <MantineHeader height={HEADER_HEIGHT}>
             <Container className={classes.inner}>
                   <Title 
-                      pt={"30px"}
+                      pt={"15px"}
                       className='font-primary'
                       fw={500} 
                       order={2}
@@ -102,6 +102,7 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
                   >   Vincenzo Nobile
                     <Title 
                       order={2} 
+                      pr={"5px"}
                       variant="gradient"
                       align='right'
                       className='font-secondary'
