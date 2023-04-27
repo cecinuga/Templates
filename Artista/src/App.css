@@ -4,6 +4,7 @@
 .w-100vh{width: 99vw;}
 .h-100vh{height: 100vh;}
 
+
 .mouse-cursor-gradient-tracking {content: ''}
 .mouse-cursor-gradient-tracking::before {
     --size: 0;
