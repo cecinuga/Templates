@@ -6,7 +6,7 @@ import { useMediaQuery } from "@mantine/hooks";
 type GridBoxProps = {
     color: string;
     hoveredColor: string;
-    children: string | ReactElement
+    src: string;
 }
 
 export default function GridBox(props: GridBoxProps){
@@ -48,7 +48,9 @@ export default function GridBox(props: GridBoxProps){
                 bottom: "50%",
                 left: "6%",
                 transform: "translateY(50%)"
-            }}>{props.children}</div>
+            }}>
+                <img src={props.src} />
+            </div>
         </animated.div>
     )
 }

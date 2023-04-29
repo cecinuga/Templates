@@ -27,25 +27,25 @@ export default function HomePage(){
                     { maxWidth: '36rem', cols: 1, spacing: 'sm' },
                 ]}
                 >
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva}/></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={brune} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={iran} /></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={brune}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={iran}></GridBox>
 
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={marcaspio} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={nag} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={planimetria} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={quality} /></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={nag}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={planimetria}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={quality}></GridBox>
 
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={restauro} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={viacavour} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={restauro}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={viacavour}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
 
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
-                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]}><img src={aviva2} /></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
+                <GridBox hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
 
                 </SimpleGrid>
             </Group>

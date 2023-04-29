@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Text, Title } from '@mantine/core';
+import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 const HEADER_HEIGHT = rem(84);
@@ -10,6 +10,11 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: "transparent",
+    zIndex: 1,
+    position:"fixed",
+    width: "100%",
+    margin:"auto"
   },
 
   burger: {
@@ -39,9 +44,10 @@ const useStyles = createStyles((theme) => ({
     fontSize: rem(13),
     color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
     padding: `${rem(7)} ${theme.spacing.sm}`,
-    fontWeight: 700,
+    fontWeight: 400,
     borderBottom: `${rem(2)} solid transparent`,
     transition: 'border-color 100ms ease, color 100ms ease',
+    fontFamily: "Russo One, sans-serif",
 
     '&:hover': {
       color: theme.colorScheme === 'dark' ? theme.white : theme.black,
@@ -86,14 +92,15 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
 
     return(
        <>
-        <MantineHeader height={HEADER_HEIGHT} mb={120}>
+        <MantineHeader height={HEADER_HEIGHT} style={{justifyContent:"center", display: "flex"}}>
             <Container className={classes.inner}>
                 <Title 
                     fw={500} 
                     order={2}
                     variant="gradient"
                     gradient={{ from: 'red.9', to: 'orange.3', deg: 45 }}
-                >   Big Mama
+                    className="font-primary"
+                >   Ristorante
                 </Title>
                 <div className={classes.links}>
                     <Group spacing={0} position="right" className={classes.mainLinks}>
