@@ -16,11 +16,11 @@ export default function HomePage(){
     const theme = useMantineTheme();
     return(
         <>
-            <BackgroundGradient bgColor={"#1a1b27"} gradient={true} move={true} />
+            <BackgroundGradient bgColor={"#1a1b27"} gradient={true} move={false} />
             <Group position={"center"} spacing="xl" style={{overflow: "hidden", paddingTop: "2rem"}} >
                 <SimpleGrid
                 cols={4}
-                spacing={50}
+                spacing={20}
                 breakpoints={[
                     { maxWidth: '62rem', cols: 3, spacing: 'md' },
                     { maxWidth: '48rem', cols: 2, spacing: 'sm' },
