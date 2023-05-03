@@ -8,7 +8,7 @@ export default function ViaCavourPage(){
     return(
         <>
             <div style={{padding:"1rem"}}></div>
-            <CarouselFoto width='400rem' data={[{image:img0}, {image:img1}, {image:img2}, {image:img3}]} />
+            <CarouselFoto slide={1} slideSize='100%' width='400rem' data={[{image:img0}, {image:img1}, {image:img2}, {image:img3}]} />
         </>
     )
 }

@@ -18,10 +18,11 @@ interface CardProps {
   height? : string
   width?: string
   slide?: number;
+  imageHeight?:string;
   i: number
 }
 
-function Card({ image, height, width, slide, i }: CardProps) {
+function Card({ image, height, width, slide, i,imageHeight }: CardProps) {
   const { classes } = useStyles();
   const positions = () => {
     if(slide!>1){
@@ -41,7 +42,7 @@ function Card({ image, height, width, slide, i }: CardProps) {
       style={{ marginRight:"auto", marginLeft:"auto", height: height, backgroundColor: "transparent"}}
       className={classes.card}
     >
-      <img src={image} width={width} style={{margin: slide==2?"unset":"auto",position:slide!>1?i!=-1?"absolute":"unset":"relative", ...positions(), padding:i!=-1?"0.5rem":"0"}} />
+      <img src={image} width={width} height={imageHeight} style={{margin: slide==2?"unset":"auto",position:slide!>1?i!=-1?"absolute":"unset":"relative", ...positions(), padding:i!=-1?"0.5rem":"0"}} />
     </Paper>
   );
 }
@@ -52,12 +53,13 @@ type CarouselFotoProps = {
     width?: string
     slide?: number
     slideSize?: string
+    imageHeight?: string 
 }
 
 export function CarouselFoto(props: CarouselFotoProps) {
   const slides = props.data.map((item, i) => (
     <Carousel.Slide key={item.image}>
-      <Card image={item.image} height={props.height} width={props.width} slide={props.slide} i={props.slide?i:-1}></Card>
+      <Card image={item.image} height={props.height} width={props.width} slide={props.slide} i={props.slide?i:-1} imageHeight={props.imageHeight}></Card>
     </Carousel.Slide>
   ));
 

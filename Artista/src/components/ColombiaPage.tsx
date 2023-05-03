@@ -13,7 +13,7 @@ export default function ColombiaPage(){
     return(
         <>
             <div style={{padding:"2rem"}}></div>
-            <CarouselFoto width='600rem' data={[{image: gif}, {image: img0}, {image: img1}, {image: img2}, {image: img3}, {image: img4}, {image: img4}, {image: img5}, {image: img6}, {image: img7}]} />
+            <CarouselFoto slide={1} slideSize='100%' width='600rem' data={[{image: gif}, {image: img0}, {image: img1}, {image: img2}, {image: img3}, {image: img4}, {image: img4}, {image: img5}, {image: img6}, {image: img7}]} />
         </>
     )
 }

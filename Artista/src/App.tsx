@@ -10,8 +10,10 @@ import BrunePage from './components/BrunePage';
 import CapoPage from './components/CapoPage';
 import ViaCavourPage from './components/ViaCavourPage';
 import ColombiaPage from './components/ColombiaPage';
-import FilziPage from './components/FilziPage.';
+import FilziPage from './components/FilziPage'
 import IqPage from './components/IqPage';
+import MarCaspioPage from './components/MarCaspioPage';
+import LibroPage from './components/LibroPage';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -23,6 +25,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/iq" element={<IqPage />} />
+        <Route path="/mar-caspio" element={<MarCaspioPage />} />
+        <Route path="/libro" element={<LibroPage />} />
         <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
         <Route path="/piazza-brunelleschi" element={<BrunePage />}></Route>
         <Route path="/capo" element={<CapoPage />}></Route>

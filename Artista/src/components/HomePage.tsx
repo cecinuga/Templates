@@ -41,7 +41,7 @@ export default function HomePage(){
                     <GridBox href="/piazza-brunelleschi" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={brune}></GridBox>
                     <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={iran}></GridBox>
 
-                    <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
+                    <GridBox href="/mar-caspio" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
                     
                     <Group align='center' style={{width:"10rem", height:"10rem", zIndex:1, position:"relative"}}>
                         <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
@@ -67,7 +67,7 @@ export default function HomePage(){
                     </MiniGridBox>
                     
                     <GridBox href="https://www.nagartgallery.com/" _blank hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={nag}></GridBox>
-                    <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={planimetria}></GridBox>
+                    <GridBox href="/libro" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={planimetria}></GridBox>
 
                 </SimpleGrid>
             </Group>

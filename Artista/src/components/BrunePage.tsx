@@ -1,4 +1,3 @@
-import { CarouselFoto } from "./CarouselFoto";
 import foto0 from '../public/brunelleschi/00.jpg'
 import foto1 from '../public/brunelleschi/01.jpg'
 import foto2 from '../public/brunelleschi/02.jpg'
