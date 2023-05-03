@@ -1,42 +1,31 @@
-import { ReactElement, useState } from "react"
-import { useSpring, animated } from '@react-spring/web'
-import { getRandomInt } from "../lib/lib";
-import { useMediaQuery } from "@mantine/hooks";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 
 type GridBoxProps = {
     color: string;
     hoveredColor: string;
     src: string;
+    href: string,
+    width?: string;
+    _blank?: boolean;
+    small?: boolean;
 }
 
 export default function GridBox(props: GridBoxProps){
     const [hover, setHover] = useState<boolean>(false)
-    const lg = useMediaQuery("(min-width: 500px)")
-    const gridBoxAni = useSpring({
-        from: {
-            top: "-600%"
-        },
-        to: {
-            top: "0%",
-        },
-        config: {
-            mass: 3*getRandomInt(1, 2),
-            friction: 30*getRandomInt(1, 2),
-            tension: 45*getRandomInt(1, 2),
-        }
-    })
-
+    const navigate = useNavigate()
     return(
-        <animated.div 
-            style={{...lg?gridBoxAni:{}, position: "relative", cursor: "pointer"}} 
+        <div 
+            style={{position: "relative", cursor: "pointer"}} 
+            onClick={props._blank?()=>location.href=props.href:()=>navigate(props.href)}
             onMouseEnter={()=>setHover(true)}
             onMouseLeave={()=>setHover(false)}
         >
             <div 
                 style={{
-                    backgroundColor: hover?`${props.hoveredColor}50`:`${props.color}50`, 
-                    width: "10rem",
-                    height: "10rem",
+                    backgroundColor: props.color=="transparent"?props.color:hover?`${props.hoveredColor}50`:`${props.color}50`, 
+                    width: props.small?"2.5rem":"10rem",
+                    height: props.small?"2.5rem":"10rem",
                     zIndex: hover?"1":"3",
                     position: "relative",
                     borderRadius: "5%"
@@ -49,9 +38,9 @@ export default function GridBox(props: GridBoxProps){
                 left: "6%",
                 transform: "translateY(50%)"
             }}>
-                <img src={props.src} />
+                <img src={props.src} width={props.width}/>
             </div>
-        </animated.div>
+        </div>
     )
 }
 

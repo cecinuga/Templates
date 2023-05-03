@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Title } from '@mantine/core';
+import { createStyles, Header as MantineHeader, Container, Anchor, Group, Burger, rem, Title,Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useNavigate } from 'react-router';
 
@@ -55,7 +55,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   mainLinkActive: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    color: theme.colorScheme === 'dark' ? theme.white : theme.white,
     borderBottomColor: theme.colors.gray[theme.colorScheme === 'dark' ? 5 : 1],
   },
 }));
@@ -77,12 +77,12 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
 
     const mainItems = mainLinks.map((item, index) => (
         <Anchor<'div'>
-        key={item.label}
-        className={cx(classes.mainLink, { [classes.mainLinkActive]: index === active })}
-        onClick={() => {
-            navigate(item.link)
-            setActive(index);
-        }}
+          key={item.label}
+          className={cx(classes.mainLink, { [classes.mainLinkActive]: index === active })}
+          onClick={() => {
+              navigate(item.link)
+              setActive(index);
+          }}
         >
         {item.label}
         </Anchor>
@@ -100,13 +100,13 @@ export default function Header({ mainLinks }: DoubleHeaderProps){
                       variant="gradient"
                       gradient={{ from: 'white', to: 'gray.7', deg: 45 }}   
                   >   Vincenzo Nobile
-                    <Title 
-                      order={2} 
+                    <Text 
+                      size={25} 
                       pr={"5px"}
                       variant="gradient"
                       align='right'
                       className='font-secondary'
-                      gradient={{ from: 'white', to: 'white', deg: 45 }}>Architetto</Title>
+                      gradient={{ from: 'white', to: 'white', deg: 45 }}>Architetto</Text>
                   </Title>
                   <div className={classes.links}>
                       <Group spacing={0} position="right" className={classes.mainLinks}>
