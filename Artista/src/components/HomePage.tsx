@@ -45,7 +45,7 @@ export default function HomePage(){
                     
                     <Group align='center' style={{width:"10rem", height:"10rem", zIndex:1, position:"relative"}}>
                         <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
-                        <Button onClick={()=>setOpened(true)} variant="gradient" gradient={{from:"white", to:"black"}} style={{position:"absolute",left:"55%", bottom:"15%", paddingRight:"2rem",paddingLeft:"2rem"}}><Title order={1} className='font-secondary'>Cliccami!</Title></Button>
+                        <Button onClick={()=>setOpened(true)} variant="gradient" gradient={{from:"white", to:"#1a1b27"}} style={{position:"absolute",left:"55%", bottom:"15%", paddingRight:"2rem",paddingLeft:"2rem"}}><Title order={1} className='font-secondary'>Cliccami!</Title></Button>
                     </Group>
                     <div></div>
 
