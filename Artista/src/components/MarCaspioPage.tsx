@@ -1,3 +1,4 @@
+import foto0 from '../public/iran/00.jpg'
 import foto1 from '../public/iran/01.jpg'
 import foto2 from '../public/iran/02.jpg'
 import foto3 from '../public/iran/03.jpg'
@@ -15,7 +16,7 @@ export default function MarCaspioPage(){
     return(
         <>
             <div style={{padding:"2rem"}}></div>
-            <CarouselFoto slide={1} slideSize='100%' width='500rem' data={[{image: foto1}, {image: foto2}, {image: foto3}, {image: foto4}, {image: foto5}, {image: foto6}, {image: foto7}, {image: foto8}, {image: foto9}, {image: foto10}, {image: foto11}]}/>
+            <CarouselFoto slide={1} slideSize='100%' width='500rem' data={[{image: foto0},{image: foto1}, {image: foto2}, {image: foto3}, {image: foto4}, {image: foto5}, {image: foto6}, {image: foto7}, {image: foto8}, {image: foto9}, {image: foto10}, {image: foto11}]}/>
         </>
     )
 }

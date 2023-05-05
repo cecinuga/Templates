@@ -14,6 +14,10 @@ import FilziPage from './components/FilziPage'
 import IqPage from './components/IqPage';
 import MarCaspioPage from './components/MarCaspioPage';
 import LibroPage from './components/LibroPage';
+import KishIslandPage from './components/KishIslandPage';
+import MonsuPage from './components/MonsuPage';
+import RestauroPage from './components/RestauroPage';
+import ViaPistoiesePage from './components/ViaPistoiesePage';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -26,6 +30,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/iq" element={<IqPage />} />
         <Route path="/mar-caspio" element={<MarCaspioPage />} />
+        <Route path="/kish-island" element={<KishIslandPage />} />
+        <Route path="/monsu" element={<MonsuPage />} />
+        <Route path="/via-pistoiese" element={<ViaPistoiesePage />} />
+        <Route path="/restauro" element={<RestauroPage />} />
         <Route path="/libro" element={<LibroPage />} />
         <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
         <Route path="/piazza-brunelleschi" element={<BrunePage />}></Route>

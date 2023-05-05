@@ -12,6 +12,8 @@ import quality from "../public/quality.jpg"
 import capo  from "../public/capo.jpg"
 import colombia  from "../public/colombia/colombia.gif"
 import filzi from "../public/filzi.jpg"
+import monsu from "../public/monsu.jpg"
+import pisto from "../public/pisto.jpg"
 
 import { Button, Group, SimpleGrid, Title,useMantineTheme, Modal, Tooltip, Text } from '@mantine/core'
 import MiniGridBox from './MiniGridBox'
@@ -39,7 +41,7 @@ export default function HomePage(){
                     <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva}></GridBox>
                     <GridBox href="/aviva-associateds-architect" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
                     <GridBox href="/piazza-brunelleschi" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={brune}></GridBox>
-                    <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={iran}></GridBox>
+                    <GridBox href="/kish-island" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={iran}></GridBox>
 
                     <GridBox href="/mar-caspio" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
                     
@@ -51,7 +53,7 @@ export default function HomePage(){
 
                     <GridBox href="/iq" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={quality}></GridBox>
 
-                    <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={restauro}></GridBox>
+                    <GridBox href="/restauro" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={restauro}></GridBox>
                     <GridBox href="/viacavour" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={viacavour}></GridBox>
                     <GridBox href="/capo" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={capo}></GridBox>
                     <GridBox href="/aviva-associateds-architect" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
@@ -60,8 +62,8 @@ export default function HomePage(){
                     <MiniGridBox color={theme.colors.gray[3]} hoveredColor={theme.colors.gray[9]}>
                         {[  
                             <GridBox small href="/filzi" hoveredColor={"transparent"} color={"transparent"} src={filzi}></GridBox>,
-                            <GridBox small href="/filzi" hoveredColor={"transparent"} color={"transparent"} src={filzi}></GridBox>,
-                            <GridBox small href="/filzi" hoveredColor={"transparent"} color={"transparent"} src={filzi}></GridBox>,
+                            <GridBox small href="/monsu" hoveredColor={"transparent"} color={"transparent"} src={monsu}></GridBox>,
+                            <GridBox small href="/via-pistoiese" hoveredColor={"transparent"} color={"transparent"} src={pisto}></GridBox>,
                             <GridBox small href="/filzi" hoveredColor={"transparent"} color={"transparent"} src={filzi}></GridBox>
                         ]}
                     </MiniGridBox>
