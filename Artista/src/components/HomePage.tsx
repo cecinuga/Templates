@@ -24,11 +24,14 @@ import MiniGridBox from './MiniGridBox'
 import { useState } from 'react'
 import { AiFillInfoCircle } from 'react-icons/ai'
 import ChiSonoPage from './ChiSonoPage'
+import { useMediaQuery } from '@mantine/hooks'
 
 export default function HomePage(){
     const theme = useMantineTheme();
     const [opened, setOpened] = useState<boolean>(false);
     const [openedTooltip, setOpenedTooltip] = useState<boolean>(false);
+    const xs = useMediaQuery("(max-width:500px)")
+
 
     return(
         <>
@@ -50,7 +53,7 @@ export default function HomePage(){
                     <GridBox href="/mar-caspio" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
                     
                     <Group align='center' style={{width:"10rem", height:"10rem", zIndex:1, position:"relative"}}>
-                        <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
+                        <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:xs?"10%":"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
                         <Button onClick={()=>setOpened(true)} variant="gradient" gradient={{from:"white", to:"#1a1b27"}} style={{position:"absolute",left:"55%", bottom:"15%", paddingRight:"2rem",paddingLeft:"2rem"}}><Title order={1} className='font-secondary'>Cliccami!</Title></Button>
                     </Group>
                     <div></div>
