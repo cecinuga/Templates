@@ -13,6 +13,7 @@ export default function BackgroundGradient(props: BackgroundGradientProps){
     const xs = useMediaQuery("(max-width: 500px)")
     const md = useMediaQuery("(max-width: 1400px)")
 
+
     const update = (e: MouseEvent) => {
         console.log(e, x, y)
         document.getElementById("mouse-cursor-gradient-tracking")?.style.setProperty('--x', x + 'px');
@@ -20,6 +21,7 @@ export default function BackgroundGradient(props: BackgroundGradientProps){
 
         handleMouseMove(e)
     }
+    
 
     return(
         <>

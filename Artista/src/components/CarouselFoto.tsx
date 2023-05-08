@@ -1,5 +1,7 @@
 import { Carousel } from '@mantine/carousel';
 import { createStyles, Paper, rem } from '@mantine/core';
+import { EmblaCarouselType } from 'embla-carousel-react';
+import { useEffect, useState } from 'react';
 
 const useStyles = createStyles(() => ({
   card: {
@@ -57,6 +59,12 @@ type CarouselFotoProps = {
 }
 
 export function CarouselFoto(props: CarouselFotoProps) {
+  const [embla, setEmbla] = useState<EmblaCarouselType>();
+
+  useEffect(() => {
+    setTimeout(() => embla && embla.reInit(), 1000);
+}, [embla]);
+
   const slides = props.data.map((item, i) => (
     <Carousel.Slide key={item.image}>
       <Card image={item.image} height={props.height} width={props.width} slide={props.slide} i={props.slide?i:-1} imageHeight={props.imageHeight}></Card>
@@ -65,6 +73,7 @@ export function CarouselFoto(props: CarouselFotoProps) {
 
   return (
     <Carousel
+      getEmblaApi={setEmbla}
       slideSize={props.slideSize?props.slideSize:1}
       breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(2) }]}
       slideGap="xl"

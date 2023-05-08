@@ -14,7 +14,11 @@ import colombia  from "../public/colombia/colombia.gif"
 import filzi from "../public/filzi.jpg"
 import monsu from "../public/monsu.jpg"
 import pisto from "../public/pisto.jpg"
-
+import prof1 from "../public/prof1.jpg"
+import prof2 from "../public/prof2.jpg"
+import prof3 from "../public/prof3.jpg"
+import prof4 from "../public/prof4.jpg"
+import salesso from "../public/salesso.jpg"
 import { Button, Group, SimpleGrid, Title,useMantineTheme, Modal, Tooltip, Text } from '@mantine/core'
 import MiniGridBox from './MiniGridBox'
 import { useState } from 'react'
@@ -56,15 +60,21 @@ export default function HomePage(){
                     <GridBox href="/restauro" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={restauro}></GridBox>
                     <GridBox href="/viacavour" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={viacavour}></GridBox>
                     <GridBox href="/capo" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={capo}></GridBox>
-                    <GridBox href="/aviva-associateds-architect" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
-
+                    <MiniGridBox color={theme.colors.gray[3]} hoveredColor={theme.colors.gray[9]}>
+                        {[  
+                            <GridBox small href="/prof2" hoveredColor={"transparent"} color={"transparent"} src={prof2}></GridBox>,
+                            <GridBox small href="/prof3" hoveredColor={"transparent"} color={"transparent"} src={prof3}></GridBox>,
+                            <GridBox small href="/prof4" hoveredColor={"transparent"} color={"transparent"} src={prof4}></GridBox>,
+                            <GridBox small href="/prof1" hoveredColor={"transparent"} color={"transparent"} src={prof1}></GridBox>
+                        ]}
+                    </MiniGridBox>
                     <GridBox href="/colombia" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={colombia} width='142rem'></GridBox>
                     <MiniGridBox color={theme.colors.gray[3]} hoveredColor={theme.colors.gray[9]}>
                         {[  
                             <GridBox small href="/filzi" hoveredColor={"transparent"} color={"transparent"} src={filzi}></GridBox>,
                             <GridBox small href="/monsu" hoveredColor={"transparent"} color={"transparent"} src={monsu}></GridBox>,
                             <GridBox small href="/via-pistoiese" hoveredColor={"transparent"} color={"transparent"} src={pisto}></GridBox>,
-                            <GridBox small href="/filzi" hoveredColor={"transparent"} color={"transparent"} src={filzi}></GridBox>
+                            <GridBox small href="/salesso" hoveredColor={"transparent"} color={"transparent"} src={salesso}></GridBox>
                         ]}
                     </MiniGridBox>
                     
