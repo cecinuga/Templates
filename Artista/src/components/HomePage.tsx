@@ -45,7 +45,7 @@ export default function HomePage(){
                     { maxWidth: '36rem', cols: 1, spacing: 'sm' },
                 ]}
                 >
-                    <GridBox href="/" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva}></GridBox>
+                    <GridBox href="/aviva" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva}></GridBox>
                     <GridBox href="/aviva-associateds-architect" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={aviva2}></GridBox>
                     <GridBox href="/piazza-brunelleschi" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={brune}></GridBox>
                     <GridBox href="/kish-island" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={iran}></GridBox>
@@ -53,8 +53,8 @@ export default function HomePage(){
                     <GridBox href="/mar-caspio" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
                     
                     <Group align='center' style={{width:"10rem", height:"10rem", zIndex:1, position:"relative"}}>
-                        <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:xs?"10%":"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
-                        <Button onClick={()=>setOpened(true)} variant="gradient" gradient={{from:"white", to:"#1a1b27"}} style={{position:"absolute",left:"55%", bottom:"15%", paddingRight:"2rem",paddingLeft:"2rem"}}><Title order={1} className='font-secondary'>Cliccami!</Title></Button>
+                        <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:xs?"0":"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
+                        <Button onClick={()=>setOpened(true)} variant="gradient" gradient={{from:"white", to:"#1a1b27"}} style={{position:"absolute",left:xs?"0":"55%", bottom:"15%", paddingRight:"2rem",paddingLeft:"2rem"}}><Title order={1} className='font-secondary'>Cliccami!</Title></Button>
                     </Group>
                     <div></div>
 
@@ -81,7 +81,7 @@ export default function HomePage(){
                         ]}
                     </MiniGridBox>
                     
-                    <GridBox href="https://www.nagartgallery.com/" _blank hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={nag}></GridBox>
+                    <a href="https://www.nagartgallery.com/" target='_blank'><GridBox href="" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={nag}></GridBox></a>
                     <GridBox href="/libro" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={planimetria}></GridBox>
 
                 </SimpleGrid>

@@ -1,5 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import { createStyles, Paper, rem } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { EmblaCarouselType } from 'embla-carousel-react';
 import { useEffect, useState } from 'react';
 
@@ -25,14 +26,23 @@ interface CardProps {
 }
 
 function Card({ image, height, width, slide, i,imageHeight }: CardProps) {
+  const xs = useMediaQuery("(max-width: 768px)")
   const { classes } = useStyles();
   const positions = () => {
     if(slide!>1){
-      if (i != -1){
+      if (i != -1&&!xs){
         if(i==0||i%2==0){
           return {right: 0}
         }
         return {left: 0}
+      }
+      else if (i != -1&&xs){
+        return {left: "50%", top:"50%",transform: "translate(-50%,-50%)"}
+      }
+    }
+    if(!(slide!>1)&&xs){
+      return {
+        lefT:"50%",
       }
     }
     return {}
@@ -44,7 +54,7 @@ function Card({ image, height, width, slide, i,imageHeight }: CardProps) {
       style={{ marginRight:"auto", marginLeft:"auto", height: height, backgroundColor: "transparent"}}
       className={classes.card}
     >
-      <img src={image} width={width} height={imageHeight} style={{margin: slide==2?"unset":"auto",position:slide!>1?i!=-1?"absolute":"unset":"relative", ...positions(), padding:i!=-1?"0.5rem":"0"}} />
+      <img src={image} width={xs?"300rem":width} height={xs?"300rem":imageHeight} style={{margin: slide==2?"unset":"auto",position:slide!>1?i!=-1?"absolute":"unset":"absolute", ...positions(), padding:i!=-1?"0.5rem":"0"}} />
     </Paper>
   );
 }
@@ -60,6 +70,7 @@ type CarouselFotoProps = {
 
 export function CarouselFoto(props: CarouselFotoProps) {
   const [embla, setEmbla] = useState<EmblaCarouselType>();
+  const xs = useMediaQuery("(max-width: 768px)")
 
   useEffect(() => {
     setTimeout(() => embla && embla.reInit(), 1000);
@@ -78,7 +89,7 @@ export function CarouselFoto(props: CarouselFotoProps) {
       breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(2) }]}
       slideGap="xl"
       align="start"
-      slidesToScroll={props.slide!=undefined?props.slide:1}
+      slidesToScroll={xs?1:props.slide!=undefined?props.slide:1}
       
     >
       {slides}
