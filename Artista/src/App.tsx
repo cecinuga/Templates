@@ -30,6 +30,9 @@ import AvivaSuccessiViaCavourPage from './components/AvivaSuccessiViaCavourPage'
 import AvivaSuccessiCosmixPage from './components/AvivaSuccessiCosmixPage,';
 import AvivaSuccessiBodyParfumPage from './components/AvivaSuccessiBodyParfumPage';
 import AvivaSuccessiChiocciolaPage from './components/AvivaSuccessiChiocciola';
+import AvivaSuccessiIdeaBellezzaPage from './components/AvivaSuccessiIdeaBellezzaPage';
+import AvivaSuccessiIdeaBellezzaCavalerizza from './components/AvivaSuccessiIdeaBellezzaCavalerizza';
+import AvivaSuccessiIdeaBellezzaBari from './components/AvivaSuccessiIdeaBellezzaBari';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -57,7 +60,10 @@ function App() {
           <Route path="/aviva/i-nostri-successi" element={<AvivaSuccessiPage />}></Route>
             <Route path="/aviva/i-nostri-successi/via-cavour" element={<AvivaSuccessiViaCavourPage />}></Route>
             <Route path="/aviva/i-nostri-successi/cosmix-store" element={<AvivaSuccessiCosmixPage />}></Route>
-            <Route path="/aviva/i-nostri-successi/idea-bellezza" element={<AvivaSuccessiBodyParfumPage />}></Route>
+            <Route path="/aviva/i-nostri-successi/body-parfum" element={<AvivaSuccessiBodyParfumPage />}></Route>
+            <Route path="/aviva/i-nostri-successi/idea-bellezza" element={<AvivaSuccessiIdeaBellezzaPage />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/cavallerizza" element={<AvivaSuccessiIdeaBellezzaCavalerizza />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/bari" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
             <Route path="/aviva/i-nostri-successi/la-chiocciola" element={<AvivaSuccessiChiocciolaPage />}></Route>
           <Route path="/aviva/corporate-profile" element={<AvivaCorporatePage />}></Route>
           <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
