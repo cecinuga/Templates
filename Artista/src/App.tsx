@@ -29,6 +29,7 @@ import AvivaSuccessiPage from './components/AvivaSuccessiPage';
 import AvivaSuccessiViaCavourPage from './components/AvivaSuccessiViaCavourPage';
 import AvivaSuccessiCosmixPage from './components/AvivaSuccessiCosmixPage,';
 import AvivaSuccessiBodyParfumPage from './components/AvivaSuccessiBodyParfumPage';
+import AvivaSuccessiChiocciolaPage from './components/AvivaSuccessiChiocciola';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -57,6 +58,7 @@ function App() {
             <Route path="/aviva/i-nostri-successi/via-cavour" element={<AvivaSuccessiViaCavourPage />}></Route>
             <Route path="/aviva/i-nostri-successi/cosmix-store" element={<AvivaSuccessiCosmixPage />}></Route>
             <Route path="/aviva/i-nostri-successi/idea-bellezza" element={<AvivaSuccessiBodyParfumPage />}></Route>
+            <Route path="/aviva/i-nostri-successi/la-chiocciola" element={<AvivaSuccessiChiocciolaPage />}></Route>
           <Route path="/aviva/corporate-profile" element={<AvivaCorporatePage />}></Route>
           <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
         <Route path="/piazza-brunelleschi" element={<BrunePage />}></Route>
