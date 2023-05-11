@@ -33,6 +33,9 @@ import AvivaSuccessiChiocciolaPage from './components/AvivaSuccessiChiocciola';
 import AvivaSuccessiIdeaBellezzaPage from './components/AvivaSuccessiIdeaBellezzaPage';
 import AvivaSuccessiIdeaBellezzaCavalerizza from './components/AvivaSuccessiIdeaBellezzaCavalerizza';
 import AvivaSuccessiIdeaBellezzaBari from './components/AvivaSuccessiIdeaBellezzaBari';
+import AvivaSuccessiIdeaBellezzaBattipaglia from './components/AvivaSuccessiIdeaBellezzaBattipaglia';
+import AvivaSuccessiIdeaBellezzaFuorigrotta from './components/AvivaSuccessiIdeaBellezzaFuorigrotta';
+import AvivaSuccessiIdeaBellezzaFoggia from './components/AvivaSuccessiIdeaBellezzaFoggia';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -64,6 +67,16 @@ function App() {
             <Route path="/aviva/i-nostri-successi/idea-bellezza" element={<AvivaSuccessiIdeaBellezzaPage />}></Route>
               <Route path="/aviva/i-nostri-successi/idea-bellezza/cavallerizza" element={<AvivaSuccessiIdeaBellezzaCavalerizza />}></Route>
               <Route path="/aviva/i-nostri-successi/idea-bellezza/bari" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/battipaglia" element={<AvivaSuccessiIdeaBellezzaBattipaglia />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/fuorigrotta" element={<AvivaSuccessiIdeaBellezzaFuorigrotta />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/foggia" element={<AvivaSuccessiIdeaBellezzaFoggia />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/matera" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/potenza" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/robologna" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/salerno" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/sorrento" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/valmontone" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
+              <Route path="/aviva/i-nostri-successi/idea-bellezza/vitteman" element={<AvivaSuccessiIdeaBellezzaBari />}></Route>
             <Route path="/aviva/i-nostri-successi/la-chiocciola" element={<AvivaSuccessiChiocciolaPage />}></Route>
           <Route path="/aviva/corporate-profile" element={<AvivaCorporatePage />}></Route>
           <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
