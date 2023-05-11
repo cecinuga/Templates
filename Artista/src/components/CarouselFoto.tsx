@@ -23,10 +23,9 @@ interface CardProps {
   slide?: number;
   imageHeight?:string;
   i: number
-  relative?: boolean
 }
 
-function Card({ image, height, width, slide, i,imageHeight, relative }: CardProps) {
+function Card({ image, height, width, slide, i,imageHeight }: CardProps) {
   const xs = useMediaQuery("(max-width: 768px)")
   const { classes } = useStyles();
   const positions = () => {
@@ -48,7 +47,6 @@ function Card({ image, height, width, slide, i,imageHeight, relative }: CardProp
     }
     return {}
   }
-  const relOrAbs = relative?"relative":"absolute"
   return (
     <Paper
       shadow="md"
@@ -56,7 +54,7 @@ function Card({ image, height, width, slide, i,imageHeight, relative }: CardProp
       style={{ marginRight:"auto", marginLeft:"auto", height: height, backgroundColor: "transparent"}}
       className={classes.card}
     >
-      <img src={image} width={xs?"300rem":width} height={xs?"300rem":imageHeight} style={{margin: slide==2?"unset":"auto",position:slide!>1?i!=-1?"absolute":"unset":relOrAbs, ...positions(), padding:i!=-1?"0.5rem":"0"}} />
+      <img src={image} width={xs?"300rem":width} height={xs?"300rem":imageHeight} style={{margin: slide==2?"unset":"auto",position:slide!>1?i!=-1?"absolute":"unset":"relative", ...positions(), padding:i!=-1?"0.5rem":"0"}} />
     </Paper>
   );
 }
@@ -68,7 +66,6 @@ type CarouselFotoProps = {
     slide?: number
     slideSize?: string
     imageHeight?: string 
-    relative?: boolean
 }
 
 export function CarouselFoto(props: CarouselFotoProps) {
@@ -81,7 +78,7 @@ export function CarouselFoto(props: CarouselFotoProps) {
 
   const slides = props.data.map((item, i) => (
     <Carousel.Slide key={item.image}>
-      <Card relative={props.relative} image={item.image} height={props.height} width={props.width} slide={props.slide} i={props.slide?i:-1} imageHeight={props.imageHeight}></Card>
+      <Card image={item.image} height={props.height} width={props.width} slide={props.slide} i={props.slide?i:-1} imageHeight={props.imageHeight}></Card>
     </Carousel.Slide>
   ));
 
