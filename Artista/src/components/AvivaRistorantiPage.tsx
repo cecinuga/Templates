@@ -20,19 +20,19 @@ export default function AvivaSuccessiIdeaBellezzaPage(){
             <AvivaWrapper>
                 <>
                     <SimpleGrid cols={4} spacing={5}>
-                        <Link to=""><img src={viacavour} /></Link>
-                        <Link to=""><img src={chiocciola} /></Link>
-                        <Link to=""><img src={body} /></Link>
-                        <Link to=""><img src={viacavour2} /></Link>
+                        <Link to="/aviva/ristoranti/aulla"><img src={viacavour} /></Link>
+                        <Link to="/aviva/ristoranti/budapest"><img src={chiocciola} /></Link>
+                        <Link to="/aviva/ristoranti/civitavecchia"><img src={body} /></Link>
+                        <Link to="/aviva/ristoranti/cagliari"><img src={viacavour2} /></Link>
 
-                        <Link to=""><img src={chiocciola2} /></Link>
-                        <Link to=""><img src={viacavour3} /></Link>
-                        <Link to=""><img src={chiocciola3} /></Link>
-                        <Link to=""><img src={body3} /></Link>
+                        <Link to="/aviva/ristoranti/faenza"><img src={chiocciola2} /></Link>
+                        <Link to="/aviva/ristoranti/firenze"><img src={viacavour3} /></Link>
+                        <Link to="/aviva/ristoranti/prato"><img src={chiocciola3} /></Link>
+                        <Link to="/aviva/ristoranti/firenze2"><img src={body3} /></Link>
 
-                        <Link to=""><img src={viacavour4} /></Link>
-                        <Link to=""><img src={chiocciola4} /></Link>
-                        <Link to=""><img src={chiocciola5} /></Link>
+                        <Link to="/aviva/ristoranti/newyork"><img src={viacavour4} /></Link>
+                        <Link to="/aviva/ristoranti/pune"><img src={chiocciola4} /></Link>
+                        <Link to="/aviva/ristoranti/seuropa"><img src={chiocciola5} /></Link>
                         
                     </SimpleGrid>
                     <Text c="white" fz={20} pt={30} align="center" >Ristoranti</Text>

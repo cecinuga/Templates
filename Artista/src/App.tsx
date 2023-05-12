@@ -82,6 +82,20 @@ import AvivaWellnessCentroBenesserePage from './components/AvivaWellnessCentroBe
 import AvivaWellnessMoschettiniPage from './components/AvivaWellnessMoschettiniPage';
 import AvivaUfficiAreonauticaPage from './components/AvivaUfficiAreonauticaPage';
 import AvivaUfficiOberonPage from './components/AvivaUfficiOberonPage';
+import AvivaUfficiAgoraPage from './components/AvivaUfficiAgoraPage';
+import AvivaUfficiMinskPage from './components/AvivaUfficiMinskPage';
+import AvivaUfficiWellengPage from './components/AvivaUfficiWellengPage';
+import AvivaRistorantiBudapestPage from './components/AvivaRistorantiBudapestPage';
+import AvivaRistorantiAullaPage from './components/AvivaRistorantiAullaPage';
+import AvivaRistorantiCivitavecchiaPage from './components/AvivaRistorantiCivitavecchiaPage';
+import AvivaRistorantiCagliariPage from './components/AvivaRistorantiCagliariPage';
+import AvivaRistorantiFaenzaPage from './components/AvivaRistorantiFaenzaPage';
+import AvivaRistorantiFirenzePage from './components/AvivaRistorantiFirenzePage';
+import AvivaRistorantiPratoPage from './components/AvivaRistorantiPratoPage';
+import AvivaRistorantiFirenze2Page from './components/AvivaRistorantiFirenze2Page';
+import AvivaRistorantiNewYorkPage from './components/AvivaRistorantiNewYorkPage';
+import AvivaRistorantiPunePage from './components/AvivaRistorantiPunePage';
+import AvivaRistorantiSEuropaPage from './components/AvivaRistorantiSEuropaPage';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -163,11 +177,23 @@ function App() {
             <Route path="/aviva/wellness/moschettini" element={<AvivaWellnessMoschettiniPage />}></Route>
           <Route path="/aviva/uffici" element={<AvivaUfficiPage />}></Route>
             <Route path="/aviva/uffici/areonautica" element={<AvivaUfficiAreonauticaPage />}></Route>
-            <Route path="/aviva/uffici/agora" element={<AvivaUfficiAreonauticaPage />}></Route>
-            <Route path="/aviva/uffici/minsk" element={<AvivaUfficiAreonauticaPage />}></Route>
+            <Route path="/aviva/uffici/agora" element={<AvivaUfficiAgoraPage />}></Route>
+            <Route path="/aviva/uffici/minsk" element={<AvivaUfficiMinskPage />}></Route>
             <Route path="/aviva/uffici/oberon" element={<AvivaUfficiOberonPage />}></Route>
-            <Route path="/aviva/uffici/welleng" element={<AvivaUfficiAreonauticaPage />}></Route>
+            <Route path="/aviva/uffici/welleng" element={<AvivaUfficiWellengPage />}></Route>
           <Route path="/aviva/ristoranti" element={<AvivaRistorantiPage />}></Route>
+            <Route path="/aviva/ristoranti/aulla" element={<AvivaRistorantiAullaPage />}></Route>
+            <Route path="/aviva/ristoranti/budapest" element={<AvivaRistorantiBudapestPage />}></Route>
+            <Route path="/aviva/ristoranti/civitavecchia" element={<AvivaRistorantiCivitavecchiaPage />}></Route>
+            <Route path="/aviva/ristoranti/cagliari" element={<AvivaRistorantiCagliariPage />}></Route>
+            <Route path="/aviva/ristoranti/faenza" element={<AvivaRistorantiFaenzaPage />}></Route>
+            <Route path="/aviva/ristoranti/firenze" element={<AvivaRistorantiFirenzePage />}></Route>
+            <Route path="/aviva/ristoranti/prato" element={<AvivaRistorantiPratoPage />}></Route>
+            <Route path="/aviva/ristoranti/firenze2" element={<AvivaRistorantiFirenze2Page />}></Route>
+            <Route path="/aviva/ristoranti/newyork" element={<AvivaRistorantiNewYorkPage />}></Route>
+            <Route path="/aviva/ristoranti/pune" element={<AvivaRistorantiPunePage />}></Route>
+            <Route path="/aviva/ristoranti/seuropa" element={<AvivaRistorantiSEuropaPage />}></Route>
+
         <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
         <Route path="/piazza-brunelleschi" element={<BrunePage />}></Route>
         <Route path="/capo" element={<CapoPage />}></Route>
