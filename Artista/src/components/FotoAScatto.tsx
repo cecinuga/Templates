@@ -6,12 +6,12 @@ type WallpaperProps = {
 }
 
 export default function FotoAScatto(props: WallpaperProps){
-    const [turno, setTurno] = useState(Array.from(props.foto, (img, i) => i==0?"block":"none"))
+    const [turno, setTurno] = useState(Array.from(props.foto, (_, i) => i==0?"block":"none"))
 
     useEffect(()=>{
         setTimeout(()=>{
             if(turno[turno.length-1]=="block"){
-                setTurno(Array.from(props.foto, (img, i) => i==0?"block":"none"))
+                setTurno(Array.from(props.foto, (_, i) => i==0?"block":"none"))
                 return
             }
             const nuovoTurno = turno.map((item, i) => item=="block"?"none":turno[i-1]=="block"?"block":"none")

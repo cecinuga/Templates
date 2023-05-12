@@ -14,12 +14,12 @@ export default function AvivaSuccessiIdeaBellezzaPage(){
             <AvivaWrapper>
                 <>
                     <SimpleGrid cols={4} spacing={5}>
-                        <Link to=""><img src={viacavour} /></Link>
-                        <Link to=""><img src={chiocciola} /></Link>
-                        <Link to=""><img src={body} /></Link>
-                        <Link to=""><img src={viacavour2} /></Link>
+                        <Link to="/aviva/uffici/areonautica"><img src={viacavour} /></Link>
+                        <Link to="/aviva/uffici/agora"><img src={chiocciola} /></Link>
+                        <Link to="/aviva/uffici/minsk"><img src={body} /></Link>
+                        <Link to="/aviva/uffici/oberon"><img src={viacavour2} /></Link>
 
-                        <Link to=""><img src={chiocciola2} /></Link>
+                        <Link to="/aviva/uffici/welleng"><img src={chiocciola2} /></Link>
                     </SimpleGrid>
                     <Text c="white" fz={20} pt={30} align="center" >Uffici</Text>
                 </>

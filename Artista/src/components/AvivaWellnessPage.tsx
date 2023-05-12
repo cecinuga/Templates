@@ -12,9 +12,9 @@ export default function AvivaSuccessiIdeaBellezzaPage(){
             <AvivaWrapper>
                 <>
                     <SimpleGrid cols={4} spacing={5}>
-                        <Link to=""><img src={viacavour} /></Link>
-                        <Link to=""><img src={chiocciola} /></Link>
-                        <Link to=""><img src={body} /></Link>
+                        <Link to="/aviva/wellness/olbia"><img src={viacavour} /></Link>
+                        <Link to="/aviva/wellness/centro-benessere"><img src={chiocciola} /></Link>
+                        <Link to="/aviva/wellness/moschettini"><img src={body} /></Link>
                     </SimpleGrid>
                     <Text c="white" fz={20} pt={30} align="center" >Wellness</Text>
                 </>

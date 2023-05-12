@@ -74,6 +74,14 @@ import AvivaKidsMkErbosaPage from './components/AvivaKidsMkErbosaPage';
 import AvivaMkSacchettiPage from './components/AvivaMkSacchettiPage';
 import AvivaKidsPriAduaPage from './components/AvivaKidsPriAduaPage';
 import AvivaKidsFogginiPage from './components/AvivaKidsFogginiPage';
+import AvivaKidsPontederaPage from './components/AvivaKidsPontederaPage';
+import AvivaKidsQuercetaPage from './components/AvivaKidsQuercetaPage';
+import AvivaKidsViareeggioPage from './components/AvivaKidsViareggioPage';
+import AvivaWellnessOlbiaPage from './components/AvivaWellnessOlbiaPage';
+import AvivaWellnessCentroBenesserePage from './components/AvivaWellnessCentroBenesserePage';
+import AvivaWellnessMoschettiniPage from './components/AvivaWellnessMoschettiniPage';
+import AvivaUfficiAreonauticaPage from './components/AvivaUfficiAreonauticaPage';
+import AvivaUfficiOberonPage from './components/AvivaUfficiOberonPage';
 
 const Home: LinkProps = {label: 'Home', link: "/"}
 
@@ -146,11 +154,19 @@ function App() {
             <Route path="/aviva/kids/mksacchetti" element={<AvivaMkSacchettiPage />}></Route>
             <Route path="/aviva/kids/priadua" element={<AvivaKidsPriAduaPage />}></Route>
             <Route path="/aviva/kids/prifoggini" element={<AvivaKidsFogginiPage />}></Route>
-            <Route path="/aviva/kids/pripontedera" element={<AvivaKidsMkErbosaPage />}></Route>
-            <Route path="/aviva/kids/priquerce" element={<AvivaKidsMkErbosaPage />}></Route>
-            <Route path="/aviva/kids/priviareggio" element={<AvivaKidsMkErbosaPage />}></Route>
+            <Route path="/aviva/kids/pripontedera" element={<AvivaKidsPontederaPage />}></Route>
+            <Route path="/aviva/kids/priquerce" element={<AvivaKidsQuercetaPage />}></Route>
+            <Route path="/aviva/kids/priviareggio" element={<AvivaKidsViareeggioPage />}></Route>
           <Route path="/aviva/wellness" element={<AvivaWellnessPage />}></Route>
+            <Route path="/aviva/wellness/olbia" element={<AvivaWellnessOlbiaPage />}></Route>
+            <Route path="/aviva/wellness/centro-benessere" element={<AvivaWellnessCentroBenesserePage />}></Route>
+            <Route path="/aviva/wellness/moschettini" element={<AvivaWellnessMoschettiniPage />}></Route>
           <Route path="/aviva/uffici" element={<AvivaUfficiPage />}></Route>
+            <Route path="/aviva/uffici/areonautica" element={<AvivaUfficiAreonauticaPage />}></Route>
+            <Route path="/aviva/uffici/agora" element={<AvivaUfficiAreonauticaPage />}></Route>
+            <Route path="/aviva/uffici/minsk" element={<AvivaUfficiAreonauticaPage />}></Route>
+            <Route path="/aviva/uffici/oberon" element={<AvivaUfficiOberonPage />}></Route>
+            <Route path="/aviva/uffici/welleng" element={<AvivaUfficiAreonauticaPage />}></Route>
           <Route path="/aviva/ristoranti" element={<AvivaRistorantiPage />}></Route>
         <Route path="/aviva-associateds-architect" element={<AvivaAAPage />}></Route>
         <Route path="/piazza-brunelleschi" element={<BrunePage />}></Route>
