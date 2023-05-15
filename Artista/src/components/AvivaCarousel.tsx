@@ -13,7 +13,7 @@ type AvivaCarouselProps = {
 export default function AvivaCarousel(props: AvivaCarouselProps){
     return(
         <AvivaWrapper>
-            <div style={{position:"relative",width:"35rem", height:"50rem"}}>
+            <div style={{position:"relative",width:"35rem", height:"50rem", left:"50%", transform:"translateX(-50%)"}}>
                 <CarouselFoto slide={1} slideSize="100%" height="100%" width="100%" imageHeight="100%" data={props.data.map(item=>({image:item}))} />
                 <Group style={{justifyContent:"space-between"}}><Text c="white" align="center" fz={20}>{props.title}</Text>{props.bottone&&<Link to={props.pdf!} target="_blank"><Button variant="gradient" gradient={{from:"white", to:"black"}}>{props.bottone}</Button></Link>}</Group>
             </div>

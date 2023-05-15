@@ -25,7 +25,7 @@ import img12 from "../public/aviva/random/12.jpg"
 import img13 from "../public/aviva/random/13.jpg"
 import img14 from "../public/aviva/random/14.jpg"
 import img15 from "../public/aviva/random/15.jpg"
-import { Group, Table, Text, useMantineTheme } from "@mantine/core"
+import { Group, Text, useMantineTheme } from "@mantine/core"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import FotoAScatto from "./FotoAScatto"
@@ -53,10 +53,10 @@ export default function AvivaPage(){
     return(
         <div style={{backgroundColor:"black",position:"absolute", width:"100%", top:"0"}}>
             <div style={{position:"relative", width:"100%", height:"100%", top:"0rem"}}>
-                <table width={sm?"100%":md?"450px":lg?"512px":"1024px"} align="center" style={{scale:scalesm?"0.3":scalemd?"0.5":"1",display:"block",position:"relative"}}>
+                <table width={sm?"100%":md?"450px":lg?"512px":"1024px"} align="center" style={{scale:scalesm?"0.3":scalemd?"0.5":"1",bottom:scalesm?"20rem":scalemd?"15rem":"0rem",display:"block",position:"relative"}}>
                     <tr style={{width:md?"50%":"100%",display:"block",padding:"0"}}>
                         <td style={{padding:"0"}} height={83} colSpan={7}>
-                            <img src={wrappersopra} style={{position:"relative",zIndex:20, top:"0.1rem"}} />
+                            <img src={wrappersopra} style={{position:"relative",zIndex:20, top:"0.25rem"}} />
                         </td>
                     </tr>
                     <tr style={{width:md?"50%":"100%",display:"block",padding:"0"}}>
@@ -79,57 +79,57 @@ export default function AvivaPage(){
                             </div>
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td width={155} height={18} style={{paddingLeft:"2rem", position:"relative", bottom:"0.8rem"}}>
                             <Link to="/aviva/corporate-profile" style={{textDecoration:"none"}}><Text onPointerEnter={()=>setHoverEtichetta1(true)} onPointerLeave={()=>setHoverEtichetta1(false)} w={180} c="white" bg={hoverEtichetta1?theme.colors.red[8]:theme.colors.gray[9]} fz={14} align="center" display={"inline-block"} px="1rem"><strong>CORPORATE PROFILE</strong></Text></Link>
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td style={{paddingLeft:"3rem",}}>
                             <img src={index_11} style={{position:"relative",left:"9.7rem",bottom:"2.6rem",zIndex:0}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td width={155} height={18} style={{paddingLeft:"2rem", position:"relative", bottom:"15.2rem"}}>
                             <Link style={{textDecoration:"none"}} to="/aviva/progetti-e-servizi"><Text onPointerEnter={()=>setHoverEtichetta2(true)} onPointerLeave={()=>setHoverEtichetta2(false)} w={180} c="white" bg={hoverEtichetta2?theme.colors.red[8]:theme.colors.gray[9]} fz={14} align="center" display={"inline-block"} px="1rem"><strong>PROGETTI E SERVIZI </strong></Text></Link>
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td style={{paddingLeft:"3rem",}}>
                             <img src={index_12} style={{position:"relative", bottom:"18.4rem",zIndex:0}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td width={155} height={18} style={{paddingLeft:"2rem", position:"relative", bottom:"16.2rem"}}>
                             <Link style={{textDecoration:"none"}} to="/aviva/i-nostri-successi"><Text onPointerEnter={()=>setHoverEtichetta3(true)} onPointerLeave={()=>setHoverEtichetta3(false)} w={180} c="white" bg={hoverEtichetta3?theme.colors.red[8]:theme.colors.gray[9]} fz={14} align="center" display={"inline-block"} px="1rem"><strong>I NOSTRI SUCCESSI</strong></Text></Link>
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td style={{paddingLeft:"3rem",}}>
                             <img src={index_12} style={{position:"relative", bottom:"19.3rem",zIndex:10}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td width={155} height={18} style={{paddingLeft:"2rem", position:"relative", bottom:"17rem"}}>
                             <Text w={180} c="white" bg={theme.colors.gray[9]} fz={14} align="center" display={"inline-block"} px="5rem" style={{height:"1.5rem"}}></Text>
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td style={{paddingLeft:"3rem",}}>
                             <img src={index_12} style={{position:"relative", bottom:"20.8rem",zIndex:0}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td style={{paddingLeft:"3rem",}}>
                             <img src={index_18} style={{position:"relative", bottom:"19.5rem",zIndex:0}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative",bottom:"20.6rem"}}>
                         <td>
                             <img src={index_20} style={{position:"relative", bottom:"19.7rem",zIndex:0}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative", bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative", bottom:"20.6rem"}}>
                         <td style={{position:"relative", bottom:"20rem"}}>
                             <Group position="center" bg={theme.colors.gray[9]} w={"100%"}>
                                 <Text fz={12} onPointerEnter={()=>{setHoverEtichettaBassa1(true)}} onPointerLeave={()=>{setHoverEtichettaBassa1(false)}} c={hoverEtichettaBassa1?theme.colors.cyan[5]:"white"}>ARREDAMENTO</Text>
@@ -142,12 +142,12 @@ export default function AvivaPage(){
                             </Group>
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative", bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative", bottom:"20.6rem"}}>
                         <td align="center">
                             <img src={relatedlinks} style={{position:"relative", bottom:"17rem",zIndex:0}} />
                         </td>
                     </tr>
-                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative", bottom:"18.7rem"}}>
+                    <tr style={{width:md?"50%":"100%",display:"block", position:"relative", bottom:"20.6rem"}}>
                         <td style={{position:"relative",bottom:"15rem"}} align="center">
                             <Link to="/"><img onPointerEnter={()=>{setNob(true)}} onPointerLeave={()=>{setNob(false)}} src={!Nob?nob1:nob2} style={{paddingRight:"150px"}}/><img src={aavivaa} /></Link>
                         </td>
