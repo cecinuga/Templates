@@ -44,6 +44,8 @@ export default function AvivaPage(){
     const [hoverEtichettaBassa6, setHoverEtichettaBassa6] = useState(false);
     const [hoverEtichettaBassa7, setHoverEtichettaBassa7] = useState(false);
     const [Nob, setNob] = useState(false);
+    const max = useMediaQuery("(max-width: 9999px)")
+    const xl = useMediaQuery("(max-width: 1508px)")
     const lg = useMediaQuery("(max-width: 1024px)")
     const md = useMediaQuery("(max-width: 768px)")
     const sm = useMediaQuery("(max-width: 512px)")
@@ -53,8 +55,8 @@ export default function AvivaPage(){
     return(
         <div style={{backgroundColor:"black",position:"absolute", width:"100%", top:"0"}}>
             <div style={{position:"relative", width:"100%", height:"100%", top:"0rem"}}>
-                <table width={sm?"100%":md?"450px":lg?"512px":"1024px"} align="center" style={{scale:scalesm?"0.3":scalemd?"0.5":"1",bottom:scalesm?"20rem":scalemd?"15rem":"0rem",display:"block",position:"relative"}}>
-                    <tr style={{width:md?"50%":"100%",display:"block",padding:"0"}}>
+                <table width={sm?"100%":md?"450px":lg?"512px":xl?"600px":"1024px"} align="center" style={{scale:scalesm?"0.3":scalemd?"0.5":xl?"0.9":"1",bottom:scalesm?"20rem":scalemd?"15rem":"0rem",display:"block",position:"relative", transform:max?"translateX(25%)":""}}>
+                    <tr style={{width:md?"50%":xl?"80%":"100%",display:"block",padding:"0", margin:0}}>
                         <td style={{padding:"0"}} height={83} colSpan={7}>
                             <img src={wrappersopra} style={{position:"relative",zIndex:20, top:"0.25rem"}} />
                         </td>

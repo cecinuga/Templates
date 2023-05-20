@@ -27,7 +27,7 @@ export default function AvivaCorporatePage(){
         <>
             <AvivaWrapper >
                 <>
-                    <div style={{position:"relative",  width:"30rem"}}>
+                    <div style={{position:"relative",  width:"30rem", left:"50%", transform:"translateX(-50%)"}}>
                         <CarouselFoto slide={1} width="100%" slideSize="100%" data={[{image: foto1}, {image: foto2}, {image: foto3}, {image: foto4}, {image: foto5}, {image: foto6}, {image: foto7}, {image: foto8}, {image: foto9}, {image: foto10}, {image: foto11}, {image: foto12}, {image: foto13}, {image: foto14}, {image: foto15},{image: foto16}]}/>
                     </div>
                     <Text style={{display:"inline-block",position:"absolute",}} c="white"><strong>Corporate Page</strong></Text>
