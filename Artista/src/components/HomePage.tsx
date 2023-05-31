@@ -38,7 +38,7 @@ export default function HomePage(){
             <Group position={"center"} spacing="xl" style={{overflow: "hidden", paddingTop: "2rem"}} >
                 <SimpleGrid
                 cols={4}
-                spacing={5}
+                spacing={0}
                 breakpoints={[
                     { maxWidth: '62rem', cols: 3, spacing: 'md' },
                     { maxWidth: '48rem', cols: 2, spacing: 'sm' },
@@ -53,7 +53,7 @@ export default function HomePage(){
                     <GridBox href="/mar-caspio" hoveredColor={theme.colors.gray[9]} color={theme.colors.gray[3]} src={marcaspio}></GridBox>
                     
                     <Group align='center' style={{width:"10rem", height:"10rem", zIndex:1, position:"relative"}}>
-                        <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:xs?"0":"50%", bottom:"50%", borderBottom:"2px solid white"}}>Chi Sono?</Title>
+                        <Title color={theme.white} className='font-primary' style={{whiteSpace:"nowrap", position:"absolute",left:xs?"0":"50%", bottom:"50%", transform:xs?"unset":"translateX(-25%)",borderBottom:"2px solid white"}}>Vincenzo Nobile</Title>
                         <Button onClick={()=>setOpened(true)} variant="gradient" gradient={{from:"white", to:"#1a1b27"}} style={{position:"absolute",left:xs?"0":"55%", bottom:"15%", paddingRight:"2rem",paddingLeft:"2rem"}}><Title order={1} className='font-secondary'>Cliccami!</Title></Button>
                     </Group>
                     <div></div>

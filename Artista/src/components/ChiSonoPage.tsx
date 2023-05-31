@@ -2,21 +2,44 @@ import { Button, Text, } from "@mantine/core";
 import vincenzonobile1 from "../public/vincenzonobile1.jpeg"
 import {BsWhatsapp, BsInstagram, BsLinkedin, BsFacebook, BsPinterest} from "react-icons/bs"
 import { AiOutlineMail } from "react-icons/ai"
-import { CarouselFoto } from "./CarouselFoto";
+import { useEffect, useState } from "react";
+
+type WallpaperProps = {
+    foto: string[]
+    timeout: number
+    width: string;
+    descr: string[]
+}
+
+function FotoAScatto(props: WallpaperProps){
+    const [turno, setTurno] = useState(Array.from(props.foto, (_, i) => i==0?"block":"none"))
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            if(turno[turno.length-1]=="block"){
+                setTurno(Array.from(props.foto, (_, i) => i==0?"block":"none"))
+                return
+            }
+            const nuovoTurno = turno.map((item, i) => item=="block"?"none":turno[i-1]=="block"?"block":"none")
+            setTurno(nuovoTurno)
+        }, props.timeout)
+    }, [turno])
+
+    return(
+        <div style={{position:"relative", top:"", left:"50%", transform:"translateX(-25%)"}}>
+            {
+                props.foto.map((img, i) => <img src={img} width={props.width} style={{display: turno[i], position:"relative"}}/>)
+            }
+            {props.descr.map((desc,i) => <Text className="font-secondary" fz={50} variant="gradient" gradient={{from: "black", to:"gray"}} align="center" c="black" style={{position:"relative",transform:"translate(-25%)",display:turno[i]}}>{desc}</Text> )}
+        </div>
+    )
+}
 
 export default function ChiSonoPage(){
     return(
-        <>
-                <CarouselFoto slide={1} slideSize="100%" width="50%" data={[{image: vincenzonobile1},{image: vincenzonobile1},{image: vincenzonobile1}]}/>
+        <div style={{overflowX:"hidden"}}>
+                <FotoAScatto width="50%" timeout={2500} foto={[vincenzonobile1,vincenzonobile1,vincenzonobile1]} descr={["La bellezza prima di tutto", "Come l'acqua, l'aria", "Come l'aria, la roccia"]} />
                 <Text>
-                    <Text
-                        color="black"
-                        fw={200}
-                        align="center"
-                        style={{letterSpacing: "0.2rem", lineHeight: "2.9rem"}}
-                    >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Etiam sagittis elit dolor, quis maximus ipsum viverra ac.<br />  Nunc eget ligula congue, malesuada odio eget, dignissim quam.
-                    </Text>
                     <Text pt={20} align="center">
                         <Button variant="gradient" gradient={{ from: 'white', to: 'gray.7', deg: 45 }} mr={15}>
                             <Text>Contattami</Text>
@@ -34,6 +57,6 @@ export default function ChiSonoPage(){
                         <BsPinterest size={32} style={{marginRight: "1.5rem", cursor: "pointer", fill: "#EE4266"}} />
                     </Text>
                 </Text>            
-        </>
+        </div>
     )
 }

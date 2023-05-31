@@ -30,7 +30,7 @@ export default function BackgroundGradient(props: BackgroundGradientProps){
                 className={props.gradient?"mouse-cursor-gradient-tracking":""} 
                 onMouseMove={props.move?update:()=>{}} 
                 onMouseLeave={props.move?update:()=>{}} 
-                style={{backgroundColor: props.bgColor, width: "100vw", height: xs?"550vh":md?"500vh":"100vh", zIndex: 0, position: "absolute", top:"0", overflow: "hidden"}}>
+                style={{backgroundColor: props.bgColor, width: "100vw", height: xs?"550vh":md?"500vh":"105vh", zIndex: 0, position: "absolute", top:"0", overflow: "hidden"}}>
             </div>
         </>
     )

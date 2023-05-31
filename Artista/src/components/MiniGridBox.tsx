@@ -17,24 +17,20 @@ export default function MiniGridBox(props: MiniGridBoxProps){
         >
             <div 
                 style={{
-                    backgroundColor: hover?`${props.hoveredColor}50`:`${props.color}50`, 
                     width: "10rem",
                     height: "10rem",
                     zIndex: hover?"1":"3",
                     position: "relative",
-                    borderRadius: "5%"
                 }}>
             </div>
             <div style={{
                 zIndex: "2",
                 position: "absolute",
-                bottom: "50%",
-                left: "6%",
-                transform: "translateY(50%)"
+                bottom: "12%",
             }}> 
                 <SimpleGrid 
                     cols={2}
-                    spacing={30}
+                    spacing={0}
                 >
                     {props.children}
                 </SimpleGrid>
